@@ -67,6 +67,11 @@ input[type="number"]:focus {
   z-index: 1;
 }
 
+.form-group > label {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
 /* Když je input aktivní nebo vyplněný */
 input:focus + label,
 input:not(:placeholder-shown) + label {
@@ -82,6 +87,8 @@ input:not(:placeholder-shown) + label {
   display: flex;
   flex-direction: column;
 }
+
+
 
 /* Tlačítko výpočtu */
 button {
