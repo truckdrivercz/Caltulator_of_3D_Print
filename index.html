@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulačka ceny 3D tisku</title>
+  <link rel="stylesheet" href="./res/css/style.css">
+  <link rel="shortcut icon" href="./res/logo/3D logo.png" type="image/x-icon">
+</head>
+<body>
+  <div class="container">
+    <h1>Kalkulačka ceny 3D tisku</h1>
+
+    <div class="form-floating">
+      <input type="number" id="filamentPrice" placeholder=" " required>
+      <label for="filamentPrice">Cena filamentu za kg (Kč):</label>
+    </div>
+
+    <div class="form-floating">
+      <input type="number" id="filamentUsed" placeholder=" " required>
+      <label for="filamentUsed">Spotřebovaný filament (g):</label>
+    </div>
+
+    <div class="form-group">
+      <label>Doba tisku:</label>
+      <div class="row">
+        <div class="form-floating">
+          <input type="number" id="printHours" placeholder=" " min="0" required>
+          <label for="printHours">Hodiny</label>
+        </div>
+        <div class="form-floating">
+          <input type="number" id="printMinutes" placeholder=" " min="0" max="59" required>
+          <label for="printMinutes">Minuty</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-floating">
+      <input type="number" id="hourlyRate" placeholder=" " value="25" readonly>
+      <label for="hourlyRate">Cena za hodinu tisku (Kč):</label>
+    </div>
+
+    <button onclick="calculate()">Spočítat cenu</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="./res/js/main.js"></script>
+</body>
+</html>
