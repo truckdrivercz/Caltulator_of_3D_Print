@@ -20,4 +20,15 @@ const calculate = () => {
   const total = materialCost + timeCost;
 
   document.getElementById("result").innerHTML = `Celková cena: <strong>${total.toFixed(2)} Kč</strong>`;
-}
+};
+
+const resetForm = () => {
+  document.getElementById("filamentPrice").value = '';
+  document.getElementById("filamentUsed").value = '';
+  document.getElementById("printHours").value = '';
+  document.getElementById("printMinutes").value = '';
+  document.getElementById("result").innerHTML = '';
+};
+
+document.getElementById("count").onclick = calculate;
+document.getElementById("reset").onclick = resetForm;

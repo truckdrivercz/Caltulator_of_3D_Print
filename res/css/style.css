@@ -92,6 +92,8 @@ input:not(:placeholder-shown) + label {
 
 /* Tlačítko výpočtu */
 button {
+  display: grid;
+  margin-bottom: 20px;
   width: 100%;
   padding: 12px;
   background-color: #007bff;
